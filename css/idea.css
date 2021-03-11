@@ -1,0 +1,50 @@
+*@import url('http://fonts.googleapis.com/css?family=Allura|josefin+sans')
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background: brown;
+	font-family: 'josefin sans',sans-serif;
+}
+
+
+
+.wrapper{
+	margin-top: 5%;
+}
+.wrapper h1{
+	font-family: 'Allura',cursive;
+	font-size: 52px;
+	margin-bottom: 60px;
+	text-align: center;
+
+}
+.team{
+	display: flex;
+	text-align: center;
+	width: auto;
+	justify-content: center;
+
+}
+.teammember{
+	background: #fff;
+	margin: 5px;
+	margin-bottom: 40px;
+	width: 580px;
+    padding: 20px;
+    line-height: 15px;
+    color: deeppink;
+    position: relative;
+    top: -50px;
+   
+    opacity: .6;
+
+}
+.teammember h3{
+	color: #81c644;
+	font-size: 26px;
+	margin-top: 50px;
+}
+

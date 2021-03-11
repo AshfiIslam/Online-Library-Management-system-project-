@@ -1,0 +1,78 @@
+
+
+<?php
+include("Connect.php");
+error_reporting(0);
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body
+		{
+			background-image: url(img/login_back.jpg);
+			background-size: cover;
+
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+
+	<div class="box">
+
+		<h1>Log in</h1>
+	<form action="" method="POST">
+
+<input type="text" name="name" value="" placeholder="CSE --- -- ---"/>
+<input type="password" name="pass" value="" placeholder="pass"/>
+<input type="submit" name="submit" value="Log In">
+
+</form>
+</div>
+
+</body>
+</html>
+
+
+
+<?php
+
+
+if (isset($_POST['submit']))
+	{
+	$userr = $_POST['name'];
+	$pwdd = $_POST['pass'];
+	$query = "SELECT * FROM admin WHERE id='$userr' && pass ='$pwdd'";
+	$data = mysqli_query($conn , $query);
+	$total = mysqli_num_rows($data);
+	if($total==1)
+	{
+		header('location:upd_del.php');
+	}
+}
+
+ if(isset($_POST['submit']))
+{
+	$user = $_POST['name'];
+	$pwd = $_POST['pass'];
+	$query = "SELECT * FROM student_info WHERE username='$user' && password ='$pwd'";
+	$data = mysqli_query($conn , $query);
+	$total = mysqli_num_rows($data);
+	if($total==1)
+	{
+		header('location:addbooks.php');
+	}
+	else
+	{
+		echo "Failed";
+	}
+}
+
+
+
+
+
+
+?>
